@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cluvi55hu4w36"]
+
+[ext_resource type="Script" uid="uid://dd8iym1n4afgw" path="res://exposition.gd" id="1_lyjop"]
+[ext_resource type="FontFile" uid="uid://c4qw28n0eghpe" path="res://fonts/OldWizard.ttf" id="1_p628k"]
+[ext_resource type="FontFile" uid="uid://df7jfby7dx5ve" path="res://fonts/TimesNewPixel (1).ttf" id="2_lyjop"]
+
+[node name="Exposition" type="Control" unique_id=408833737]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lyjop")
+
+[node name="Label" type="Label" parent="." unique_id=1517656865]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 88.0
+offset_right = 1012.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("1_p628k")
+theme_override_font_sizes/font_size = 81
+text = "SNOW WHITE GAME"
+
+[node name="Body" type="RichTextLabel" parent="." unique_id=17991815]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 189.0
+offset_right = 773.0
+offset_bottom = 556.0
+theme_override_constants/paragraph_separation = 47
+theme_override_fonts/normal_font = ExtResource("2_lyjop")
+theme_override_font_sizes/normal_font_size = 39
+text = "The WICKED QUEEN has sent the HUNTSMAN to kill you, SNOW WHITE.
+Can you CHARM the HUNTSMAN? Maybe he'll get KILLED before you? Who knows...
+Press SPACE to jump"
+fit_content = true
+
+[node name="Timer" type="Timer" parent="." unique_id=644412502]
+wait_time = 0.06
+autostart = true
+
+[node name="Button" type="Button" parent="." unique_id=825609401]
+visible = false
+layout_mode = 0
+offset_left = 77.0
+offset_top = 493.0
+offset_right = 338.0
+offset_bottom = 578.0
+text = "START"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
