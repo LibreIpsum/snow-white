@@ -5,7 +5,10 @@
 
 [node name="Node2D" type="Node2D" unique_id=512791492]
 
-[node name="Node2D" parent="." unique_id=1246091836 instance=ExtResource("2_0xm2m")]
+[node name="level2" parent="." unique_id=1246091836 instance=ExtResource("2_0xm2m")]
+
+[node name="level1" parent="." unique_id=1504113505 instance=ExtResource("2_0xm2m")]
+position = Vector2(2500, 0)
 
 [node name="SnowWhite" parent="." unique_id=1750898708 instance=ExtResource("1_ig7tw")]
 position = Vector2(439, 366)
