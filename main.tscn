@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dknvjhiop8yj7"]
 
-[ext_resource type="PackedScene" uid="uid://dr6giasiuould" path="res://snow-white.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bh6bi85ljmx74" path="res://level.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cgwpnrvomio61" path="res://hunter-test.tscn" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=512791492]
 
@@ -10,5 +10,4 @@
 [node name="level1" parent="." unique_id=1504113505 instance=ExtResource("2_0xm2m")]
 position = Vector2(2500, 0)
 
-[node name="SnowWhite" parent="." unique_id=1750898708 instance=ExtResource("1_ig7tw")]
-position = Vector2(439, 366)
+[node name="Hunter" parent="." unique_id=61401608 instance=ExtResource("3_h2yge")]
