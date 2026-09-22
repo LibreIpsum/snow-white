@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cbgcqs3lb1iu7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hjrg"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="Animation" id="Animation_hncfh"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_peedv"]
+resource_name = "in_air"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_aavv4"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4vwxj"]
+_data = {
+&"idle": SubResource("Animation_hncfh"),
+&"in_air": SubResource("Animation_peedv"),
+&"run": SubResource("Animation_aavv4")
+}
+
+[node name="ActionPlayer" type="CharacterBody2D" unique_id=1542633197]
+editor_description = "Platformer character that can shoot.
+
+Has a dynamic camera "
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1833430770]
+hframes = 4
+
+[node name="Muzzle" type="Marker2D" parent="Sprite2D" unique_id=2126345003]
+position = Vector2(11, 0)
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1716780795]
+position = Vector2(64, 0)
+zoom = Vector2(2, 2)
+limit_top = -320
+limit_bottom = 48
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+editor_draw_limits = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1440930771]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_1hjrg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=976957274]
+libraries/ = SubResource("AnimationLibrary_4vwxj")
+
+[node name="ShootDelay" type="Timer" parent="." unique_id=2143823424]
+wait_time = 0.1
+one_shot = true
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="." unique_id=1566007342]
