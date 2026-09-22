@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bh6bi85ljmx74"]
 
 [ext_resource type="Texture2D" uid="uid://d202fggdp5xy" path="res://art/grass.png" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://c2smi06ce6tbx" path="res://level.gd" id="1_vonw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -24,6 +25,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vonw3")
 
 [node name="Node2D" type="Node2D" unique_id=1246091836]
+script = ExtResource("1_vonw3")
 
 [node name="Layer0" type="TileMapLayer" parent="." unique_id=1257063755]
 use_parent_material = true
