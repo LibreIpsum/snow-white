@@ -25,4 +25,4 @@ func show_start_button():
 
 
 func _on_button_button_down() -> void:
-	get_tree().change_scene_to_file("res://snow-white.tscn")
+	get_tree().change_scene_to_file("res://main.tscn")
