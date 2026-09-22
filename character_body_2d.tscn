@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://dr6giasiuould"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1750898708]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916275443]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1298800441]
