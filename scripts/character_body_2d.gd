@@ -4,7 +4,9 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -800.0
 
-var AFFECTION = 50 # 0 means death, 100 means success
+const MIN_AFFECTION = 0
+const MAX_AFFECTION = 100
+var affection = 50 # 0 means death, 100 means success
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,10 +27,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func _process(delta: float) -> void:
-	pass 
-
 func _hit() -> void:
-	AFFECTION -= 5
-	if AFFECTION <= 0:
-		pass
+	affection -= 5
+	if affection <= MIN_AFFECTION:
+		pass # lose condition
+
+func _collect() -> void:
+	affection += 5
+	if affection >= MAX_AFFECTION:
+		pass # win condition
