@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cgwpnrvomio61"]
 
 [ext_resource type="PackedScene" uid="uid://dr6giasiuould" path="res://snow-white.tscn" id="1_n81rv"]
-[ext_resource type="Texture2D" uid="uid://dy1j68q58bgpk" path="res://art/test.png" id="2_7oau4"]
+[ext_resource type="Texture2D" uid="uid://c4ob4lbc3vdsl" path="res://art/Hunter.png" id="3_7oau4"]
 [ext_resource type="Script" uid="uid://dgldhcjudm7hq" path="res://scripts/hunter.gd" id="3_otw82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qe7e"]
+size = Vector2(9.053496, 24.40329)
 
 [node name="Hunter" type="Node2D" unique_id=61401608]
 
@@ -17,8 +18,9 @@ script = ExtResource("3_otw82")
 snowWhite = NodePath("../SnowWhite")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1485739817]
-texture = ExtResource("2_7oau4")
+texture = ExtResource("3_7oau4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=678475840]
+position = Vector2(-1, 5.3499985)
 scale = Vector2(2.43, 2.43)
 shape = SubResource("RectangleShape2D_8qe7e")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cluvi55hu4w36"]
 
-[ext_resource type="Script" uid="uid://dd8iym1n4afgw" path="res://exposition.gd" id="1_lyjop"]
+[ext_resource type="Script" uid="uid://dd8iym1n4afgw" path="res://scripts/exposition.gd" id="1_lyjop"]
 [ext_resource type="FontFile" uid="uid://c4qw28n0eghpe" path="res://fonts/OldWizard.ttf" id="1_p628k"]
 [ext_resource type="FontFile" uid="uid://df7jfby7dx5ve" path="res://fonts/TimesNewPixel (1).ttf" id="2_lyjop"]
 
