@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b04ymn78t0cv8"]
+
+[ext_resource type="Script" uid="uid://dgldhcjudm7hq" path="res://scripts/hunter.gd" id="1_hgowg"]
+[ext_resource type="Texture2D" uid="uid://dy1j68q58bgpk" path="res://art/test.png" id="2_ink7b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qe7e"]
+
+[node name="Hunter" type="CharacterBody2D" unique_id=735370612]
+script = ExtResource("1_hgowg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1066063019]
+texture = ExtResource("2_ink7b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1870955235]
+scale = Vector2(2.43, 2.43)
+shape = SubResource("RectangleShape2D_8qe7e")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1005846314]
+position = Vector2(65, 0)
