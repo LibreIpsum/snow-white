@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bv4nxcn4uebhp"]
+
+[ext_resource type="PackedScene" uid="uid://bh6bi85ljmx74" path="res://level.tscn" id="1_22520"]
+[ext_resource type="PackedScene" uid="uid://b04ymn78t0cv8" path="res://hunter.tscn" id="2_ymdga"]
+[ext_resource type="PackedScene" uid="uid://dr6giasiuould" path="res://snow-white.tscn" id="3_pq0yv"]
+
+[node name="Node2D" type="Node2D" unique_id=2046381563]
+
+[node name="Node2D" parent="." unique_id=1246091836 instance=ExtResource("1_22520")]
+position = Vector2(-806, 29)
+
+[node name="SnowWhite" parent="." unique_id=1750898708 instance=ExtResource("3_pq0yv")]
+position = Vector2(300, 104)
+
+[node name="Hunter" parent="." unique_id=735370612 node_paths=PackedStringArray("snowWhite") instance=ExtResource("2_ymdga")]
+position = Vector2(201, 102)
+snowWhite = NodePath("../SnowWhite")
