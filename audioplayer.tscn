@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://coi8eft40le2n"]
+
+[ext_resource type="AudioStream" uid="uid://l30s16mfajor" path="res://audio/snow white run away.wav" id="1_kvjbc"]
+
+[node name="Audioplayer" type="AudioStreamPlayer" unique_id=1009239260]
+stream = ExtResource("1_kvjbc")
+autoplay = true
