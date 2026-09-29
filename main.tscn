@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bh6bi85ljmx74" path="res://level.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b04ymn78t0cv8" path="res://hunter.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b18pb6fk4iymy" path="res://mirror.tscn" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=512791492]
 
@@ -11,3 +12,7 @@
 position = Vector2(2500, 0)
 
 [node name="Hunter" parent="." unique_id=735370612 instance=ExtResource("2_h2yge")]
+
+[node name="Mirror" parent="." unique_id=665813089 instance=ExtResource("3_h2yge")]
+position = Vector2(1039, 497)
+scale = Vector2(2, 2)
