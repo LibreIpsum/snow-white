@@ -12,6 +12,7 @@ script = ExtResource("1_hgowg")
 snowWhite = NodePath("SnowWhite")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1066063019]
+texture_filter = 1
 texture = ExtResource("2_ink7b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1870955235]
