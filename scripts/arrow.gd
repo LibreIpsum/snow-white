@@ -8,5 +8,6 @@ func _physics_process(delta: float) -> void:
 
 	if collision_info and is_instance_valid(collision_info.get_collider()):
 		if collision_info.get_collider().name == "SnowWhite":
-			
+			get_tree().change_scene_to_file("res://YouLose.tscn")
+
 			queue_free()
