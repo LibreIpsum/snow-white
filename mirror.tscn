@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b18pb6fk4iymy"]
+
+[ext_resource type="Texture2D" uid="uid://casi6mjyqcp3r" path="res://art/mirror.png" id="1_scjey"]
+
+[node name="Mirror" type="Node2D" unique_id=665813089]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1735488399]
+texture_filter = 1
+scale = Vector2(3.3333333, 3.3333333)
+texture = ExtResource("1_scjey")
