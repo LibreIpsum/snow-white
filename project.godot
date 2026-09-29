@@ -15,10 +15,15 @@ run/main_scene="uid://cluvi55hu4w36"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Audioplayer="*uid://coi8eft40le2n"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/canvas_textures/default_texture_filter=1
 
 [dotnet]
 
@@ -30,4 +35,5 @@ project/assembly_name="Snow White"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
