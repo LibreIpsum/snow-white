@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://pvsxh3bfe4qp"]
 
+[ext_resource type="Script" uid="uid://dvnbkcxdvfb6l" path="res://you_win.gd" id="1_bi7tr"]
 [ext_resource type="FontFile" uid="uid://c4qw28n0eghpe" path="res://fonts/OldWizard.ttf" id="1_jac7q"]
 [ext_resource type="FontFile" uid="uid://df7jfby7dx5ve" path="res://fonts/TimesNewPixel (1).ttf" id="2_bi7tr"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bi7tr")
 
 [node name="Label" type="Label" parent="." unique_id=1783522810]
 layout_mode = 0
@@ -32,3 +34,13 @@ theme_override_fonts/normal_font = ExtResource("2_bi7tr")
 theme_override_font_sizes/normal_font_size = 39
 text = "YESSSSSS"
 fit_content = true
+
+[node name="Button" type="Button" parent="." unique_id=945135196]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 303.0
+offset_right = 300.0
+offset_bottom = 394.0
+text = "PLAY AGAIN"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
