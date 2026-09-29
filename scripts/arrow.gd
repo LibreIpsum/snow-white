@@ -8,5 +8,5 @@ func _physics_process(delta: float) -> void:
 
 	if collision_info and is_instance_valid(collision_info.get_collider()):
 		if collision_info.get_collider().name == "SnowWhite":
-			# reduce affection meter
+			
 			queue_free()
