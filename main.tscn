@@ -21,7 +21,7 @@ snowWhite = NodePath("../SnowWhite")
 position = Vector2(267, 2)
 
 [node name="Timer" type="Timer" parent="." unique_id=288134611]
-wait_time = 60.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -30,6 +30,6 @@ offset_left = 470.0
 offset_top = 32.0
 offset_right = 631.0
 offset_bottom = 55.0
-text = "Survive for 1 minute!"
+text = "Survive for 30 seconds!"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
