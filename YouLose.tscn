@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b7gfa6j82c54o"]
+
+[ext_resource type="FontFile" uid="uid://c4qw28n0eghpe" path="res://fonts/OldWizard.ttf" id="1_c5pg7"]
+[ext_resource type="Script" uid="uid://ck18xb5xmnx0v" path="res://you_lose.gd" id="1_gqltx"]
+[ext_resource type="FontFile" uid="uid://df7jfby7dx5ve" path="res://fonts/TimesNewPixel (1).ttf" id="2_gqltx"]
+
+[node name="YouLose" type="Control" unique_id=1967129557]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gqltx")
+
+[node name="Label" type="Label" parent="." unique_id=1939772925]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 88.0
+offset_right = 1012.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("1_c5pg7")
+theme_override_font_sizes/font_size = 81
+text = "YOU LOSE"
+
+[node name="Body" type="RichTextLabel" parent="." unique_id=87286903]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 189.0
+offset_right = 773.0
+offset_bottom = 556.0
+theme_override_constants/paragraph_separation = 47
+theme_override_fonts/normal_font = ExtResource("2_gqltx")
+theme_override_font_sizes/normal_font_size = 39
+text = "The HUNTSMAN caught you..."
+fit_content = true
+
+[node name="Button" type="Button" parent="." unique_id=297367199]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 313.0
+offset_right = 358.0
+offset_bottom = 405.0
+text = "RESTART"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
